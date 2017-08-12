@@ -1,0 +1,7 @@
+# directories
+.vagrant
+
+# files
+*.merged
+*.img
+*.vmdk
