@@ -1,0 +1,18 @@
+{
+  "server": true,
+  "bootstrap_expect": 1,
+  "client_addr": "0.0.0.0",
+  "bind_addr": "0.0.0.0",
+  "advertise_addr": "172.17.8.101",
+  "datacenter": "dc1",
+  "data_dir": "/var/lib/consul",
+  "log_level": "DEBUG",
+  "enable_syslog": false,
+  "encrypt": "IZzKkIlp8XsjlPh2jOJ1z5MzJZKnWHucInhshCA0nhs=",
+  "rejoin_after_leave": true,
+  "verify_incoming": false,
+  "verify_outgoing": false,
+  "skip_leave_on_interrupt": true,
+  "leave_on_terminate": true,
+  "ui": true
+}

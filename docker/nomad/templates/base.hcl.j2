@@ -1,0 +1,34 @@
+# -------- Base Cluster Confiruation -------- #
+
+region = "us/east"
+
+data_dir = "/var/lib/nomad"
+
+bind_addr = "127.0.0.1"
+
+log_level = "DEBUG"
+
+enable_debug = true
+
+addresses {
+  http = "{{ hostvars[inventory_hostname]['ip'] }}"
+  rpc = "{{ hostvars[inventory_hostname]['ip'] }}"
+  serf = "{{ hostvars[inventory_hostname]['ip'] }}"
+}
+
+advertise {
+  http = "{{ hostvars[inventory_hostname]['ip'] }}:4646"
+  rpc = "{{ hostvars[inventory_hostname]['ip'] }}:4647"
+  serf = "{{ hostvars[inventory_hostname]['ip'] }}:4648"
+}
+
+consul {
+  address = "127.0.0.1:8500"
+  server_service_name = "nomad-server"
+  client_service_name = "nomad-client"
+
+  auto_advertise = true
+
+  server_auto_join = true
+  client_auto_join = true
+}

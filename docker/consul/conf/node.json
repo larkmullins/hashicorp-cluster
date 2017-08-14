@@ -1,0 +1,4 @@
+{
+  "retry_join": [ "172.17.8.101" ],
+  "retry_interval": "15s"
+}
