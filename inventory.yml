@@ -1,0 +1,8 @@
+[all:vars]
+hash=IZzKkIlp8XsjlPh2jOJ1z5MzJZKnWHucInhshCA0nhs=
+
+[servers]
+server-01 ip=172.17.8.101 hostname=server-01 datacenter=dc1
+
+[clients]
+client-01 ip=172.18.9.101 hostname=client-01 datacenter=dc1

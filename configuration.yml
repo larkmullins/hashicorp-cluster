@@ -1,0 +1,27 @@
+- name: "consul server configuration"
+  hosts: servers
+  connection: local
+  gather_facts: no
+  tasks:
+    - name: "consul base.conf"
+      template:
+        src: ./docker/consul/templates/server.json.j2
+        dest: ./docker/consul/conf/base.json
+    - name: "consul node.conf"
+      template:
+        src: ./docker/consul/templates/node.json.j2
+        dest: ./docker/consul/conf/node.json
+
+- name: "nomad server configuration"
+  hosts: servers
+  connection: local
+  gather_facts: no
+  tasks:
+    - name: "nomad base.conf"
+      template:
+        src: ./docker/nomad/templates/base.hcl.j2
+        dest: ./docker/nomad/conf/base.hcl
+    - name: "nomad server.conf"
+      template:
+        src: ./docker/nomad/templates/server.hcl.j2
+        dest: ./docker/nomad/conf/node.hcl
